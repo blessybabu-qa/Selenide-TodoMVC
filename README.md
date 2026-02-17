@@ -1,28 +1,33 @@
-📝 *Selenide TodoMVC Automation*
 
-This project is a learning exercise in automated UI testing. It uses the Page Object Model (POM) to test the TodoMVC application, ensuring that tasks can be added, tracked, and managed effectively.
 
-🛠 *Tools Used*
+A modern, scalable E2E testing framework for the [TodoMVC](https://todomvc.com/) application. This project demonstrates advanced **Page Object Model (POM)** patterns and the use of **semantic locators** for resilient automation.
 
-Kotlin: The programming language used for writing the tests.
-Selenide: The automation framework used to interact with the browser. It provides "smart waiting" and clear assertions without using complex symbols.
-Maven: The build tool that manages project dependencies (via the pom.xml file).
-TestNG: The testing framework that organizes and runs the test cases.
+## 🚀 Key Features
+- **Page Object Model (POM):** Clean separation between test logic and UI locators.
+- **Resilient Locators:** Specialized use of `getByTestId` and `getByRole` to mimic user behavior and ensure stability.
+- **Dynamic Assertions:** Leveraging Playwright's auto-awaiting assertions (`expect`).
+- **Data-Driven:** Support for bulk todo creation and state-based validation.
 
-🏗 *Project Method: Page Object Model (POM)*
+## 🛠️ Tech Stack
+- **Engine:** [Playwright](https://playwright.dev/)
+- **Language:** JavaScript (ES6+)
+- **Test Runner:** Playwright Test
 
-This project follows the Page Object Model. This means the code is split into two clear parts:
-Pages: These files contain the "Selectors" (locators) and the actions you can take on a page (like addTodo or deleteTodo).
-Tests: These files contain the actual test scenarios. They call the methods from the Page files to perform actions and verify results..
+## 📂 Project Structure
+- **pages/** - Robust Page Objects using semantic locators.
+- **tests/** - Clean, readable E2E test scenarios.
+- **playwright.config.js** - Framework configuration.
 
-*How to Run the Project*
+## 🧪 Included Scenarios
+1. **Creation:** Adding single and multiple todos.
+2. **Filtering:** Verifying "Active", "Completed", and "All" views.
+3. **Management:** Completing tasks and clearing the completed list.
+4. **Validation:** UI state sync with internal data tracking.
 
-You can run the tests in two ways:
-Using your IDE (IntelliJ IDEA)
-Navigate to the src/test/kotlin/tests folder.
-Right-click on TodoTest.kt.
-Select Run 'TodoTest'.
+## 🏁 Quick Start
+1. Clone the repo: `git clone https://github.com/blessybabu-qa/TodoMVC_Playwright.git`
+2. Install dependencies: `npm install`
+3. Run tests: `npx playwright test`
 
-*Viewing Results*
-
-Console: After the run, check the terminal or the IDE console to see if the tests passed (Green) or failed (Red).
+---
+*Created with ❤️ by Blessy Babu — Passionate about high-quality automation.*
